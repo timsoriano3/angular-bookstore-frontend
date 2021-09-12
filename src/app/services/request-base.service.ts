@@ -16,7 +16,7 @@ export abstract class RequestBaseService {
     });
   }
 
-  get getHeader(): HttpHeaders {
+  get getHeaders(): HttpHeaders {
     return new HttpHeaders(
       {
         authorization: 'Bearer ' + this.currentUser?.token,
