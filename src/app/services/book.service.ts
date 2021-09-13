@@ -6,7 +6,7 @@ import { HttpClient } from "@angular/common/http";
 import { Book } from "../models/book.model";
 import { Observable } from "rxjs";
 
-const API_URL = `${environment.BASE_URL}/api/book/`;
+const API_URL = `${environment.BASE_URL}/api/book`;
 
 @Injectable({
   providedIn: 'root'
