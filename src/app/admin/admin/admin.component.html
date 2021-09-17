@@ -1,6 +1,10 @@
 <div class="container">
   <div class="pt-5">
 
+    <div class="alert alert-danger" *ngIf="errorMessage">
+      {{errorMessage}}
+    </div>
+
     <div class="card">
       <div class="card-header">
         <div class="row">
@@ -32,8 +36,8 @@
             <td>{{ item.author }}</td>
             <td>{{ item.createTime | date: 'medium' }}</td>
             <td>
-              <button class="btn btn-primary me-1">Edit</button>
-              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-primary me-1" (click)="editBookRequest(item)">Edit</button>
+              <button class="btn btn-danger" (click)="deleteBook(item, ind)">Delete</button>
             </td>
           </tr>
           </tbody>
@@ -43,4 +47,4 @@
   </div>
 </div>
 
-<app-book></app-book>
+<app-book [book]="selectedBook" (save)="saveBookWatcher($event)"></app-book>
