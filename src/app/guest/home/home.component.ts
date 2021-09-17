@@ -37,6 +37,7 @@ export class HomeComponent implements OnInit {
     }
 
     const purchase = new Purchase(this.authenticationService.currentUserValue.id, item.id, item.price);
+
     this.purchaseService.savePurchase(purchase).subscribe(data => {
       this.infoMessage = 'Purchase Completed Successfully!'
     }, err => {

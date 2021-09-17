@@ -32,7 +32,7 @@
           <tr *ngFor="let item of bookList; index as ind">
             <th scope="row">{{ ind + 1 }}</th>
             <td>{{ item.title }}</td>
-            <td>{{ item.price | currency: 'USD' }}</td>
+            <td>{{ item.price | currency: 'CAD' }}</td>
             <td>{{ item.author }}</td>
             <td>{{ item.createTime | date: 'medium' }}</td>
             <td>
