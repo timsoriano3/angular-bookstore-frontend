@@ -1,4 +1,5 @@
+
 export const environment = {
   production: true,
-  BASE_URL: null
+  BASE_URL: "https://test-for-production"
 };

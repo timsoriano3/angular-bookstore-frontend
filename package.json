@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "config": "node set-env.js",
+    "start": "node server.js",
     "build": "ng build",
+    "build-prod": "$(npm bin)/ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -25,6 +27,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@types/node": "^16.9.1",
     "bootstrap": "^5.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "jquery": "^3.6.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
