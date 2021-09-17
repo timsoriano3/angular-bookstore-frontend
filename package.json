@@ -8,7 +8,8 @@
     "build": "ng build",
     "build-prod": "$(npm bin)/ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "npm run config && npm run build-prod"
   },
   "private": true,
   "dependencies": {

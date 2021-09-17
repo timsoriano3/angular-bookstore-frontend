@@ -1,0 +1,8 @@
+{
+  "name": "timsoriano-bookstore-ui",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
